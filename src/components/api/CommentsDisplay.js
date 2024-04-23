@@ -137,7 +137,7 @@ const CommentsDisplay = () => {
             <div>
                 <div className="comment-item">
                     <div className="comment-header">
-                    <h3 className="name">{comment.user? comment.user : 'Anonymous'}</h3>
+                    <h3 className="name">{comment.user_full_name}</h3>
 
                         <div className="comment-links">
                             {comment.web_url && <a href={ensureHttpPrefix(comment.web_url)} target="_blank" rel="noopener noreferrer">Website</a>}
