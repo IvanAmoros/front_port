@@ -1,0 +1,166 @@
+/* ProjectsDisplay.css */
+.projects-display {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #526D82;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    color: #333;
+}
+
+.projects-display h2 {
+    color: #DDE6ED;
+    font-size: 24px;
+}
+
+.project-item {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    /* For carousel controls positioning */
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-item h3 {
+    margin: 0;
+    color: #27374D;
+}
+
+.project-item a {
+    /* Style for GitHub link */
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #27374D;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.project-item .description,
+.project-item h4 {
+    color: #9DB2BF;
+    font-size: 14px;
+}
+
+.project-item .description {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.skill-tag {
+    color: #27374D;
+    background-color: #DDE6ED;
+    padding: 2px 5px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+}
+
+.project-images {
+    margin-top: 15px;
+    position: relative;
+    /* Necessary for positioning the carousel controls */
+}
+
+.project-image {
+    display: none;
+    /* Hide initially */
+    opacity: 0;
+    /* Start transparent for the transition effect */
+    transition: opacity 0.5s ease-in-out;
+    /* Smooth transition for the active image */
+    position: relative;
+    /* This is important to position the caption correctly */
+}
+
+.project-image.active {
+    display: block;
+    /* Show the active image */
+    opacity: 1;
+    /* Make it fully visible */
+}
+
+.carousel-control {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background */
+    color: #FFFFFF;
+    /* White color for icons */
+    padding: 10px;
+    /* More clickable area */
+    border-radius: 50%;
+    /* Circular buttons */
+    width: 40px;
+    /* Fixed width */
+    height: 40px;
+    /* Fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    z-index: 2;
+    user-select: none;
+    /* Prevents text selection */
+    cursor: pointer;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Darker on hover for better visibility */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.project-image img {
+    max-width: 100%;
+    /* Keep as is to maintain responsiveness */
+    max-height: 400px;
+    /* Adjust as needed */
+    width: auto;
+    /* Ensure aspect ratio is maintained */
+    height: auto;
+    /* Ensure aspect ratio is maintained */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-image p {
+    position: absolute;
+    bottom: 65px; /* Adjust this value to position the caption closer or further from the bottom edge */
+    width: 100%;
+    text-align: center;
+    color: #DDE6ED; /* Adjust color for readability */
+    padding: 5px; /* Padding inside the caption for aesthetics */
+    margin: 0;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+  }
+
+  .aspect-ratio-box {
+    width: 100%;
+    height: 0;
+    padding-top: 75%; /* Keeps the 4:3 aspect ratio */
+    position: relative;
+    overflow: hidden; /* Ensures nothing spills outside the container */
+  }
+
+  .aspect-ratio-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adjust as needed */
+  }

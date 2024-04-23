@@ -6,6 +6,7 @@ import CommentsDisplay from "./components/api/CommentsDisplay";
 import SkillsDisplay from "./components/api/SkillsDisplay";
 import WorksDisplay from "./components/api/WorksDisplay";
 import StudiesDisplay from "./components/api/StudiesDisplay";
+import ProjectsDisplay from "./components/api/ProjectsDisplay";
 import SkillsManager from "./components/api/SkillsManager";
 import LoginPage from "./components/LoginPage";
 import CookieConsentComponent from "./components/CookieConsentComponent";
@@ -28,6 +29,7 @@ function App() {
                 element={
                   <>
                     <MainPage />
+                    <ProjectsDisplay />
                     <CommentsDisplay />
                     <SkillsDisplay />
                     <WorksDisplay />
